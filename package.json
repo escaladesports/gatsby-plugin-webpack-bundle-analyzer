@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-webpack-bundle-analyzer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Gatsby plugin to help analyze your bundle content.",
   "scripts": {
     "build": "babel src --out-dir .",
