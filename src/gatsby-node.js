@@ -1,11 +1,14 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
-exports.modifyWebpackConfig = ({ config, stage, store }, options) => {
-	if(options.disable) return
-	if (
-		stage === 'develop' ||
-		(options.production && stage === 'build-javascript')
-	) {
-		config.plugin('webpack-bundle-analyzer', BundleAnalyzerPlugin, [options])
-	}
-}
+// eslint-disable-next-line import/prefer-default-export
+export const onCreateWebpackConfig = ({ actions, stage }, options) => {
+  if (options.disable) return;
+  if (
+    stage === "develop" ||
+    (options.production && stage === "build-javascript")
+  ) {
+    actions.setWebpackConfig({
+      plugins: [new BundleAnalyzerPlugin(options)]
+    });
+  }
+};
