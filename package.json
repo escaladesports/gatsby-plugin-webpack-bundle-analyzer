@@ -4,7 +4,8 @@
   "description": "A Gatsby plugin to help analyze your bundle content.",
   "scripts": {
     "build": "babel src --out-dir .",
-    "prepublishOnly": "npm run build"
+    "prepublish": "npm run build",
+    "test": "echo 'No test specified'"
   },
   "main": "index.js",
   "homepage": "https://github.com/escaladesports/gatsby-plugin-webpack-bundle-analyzer",
