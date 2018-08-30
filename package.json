@@ -5,7 +5,8 @@
   "scripts": {
     "build": "babel src --out-dir .",
     "prepublish": "npm run build",
-    "test": "echo 'No test specified'"
+    "test": "echo 'No test specified'",
+    "travis": "opn https://travis-ci.org/escaladesports/gatsby-plugin-webpack-bundle-analyzer/branches"
   },
   "main": "index.js",
   "homepage": "https://github.com/escaladesports/gatsby-plugin-webpack-bundle-analyzer",
@@ -26,7 +27,8 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-rc.1",
     "@babel/core": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1"
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "opn-cli": "^3.1.0"
   },
   "peerDependencies": {
     "gatsby": "next"
