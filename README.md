@@ -31,7 +31,6 @@ See [original plugin](https://github.com/webpack-contrib/webpack-bundle-analyzer
 
 Additional options:
 
-- `production`: Run the analyzer on a production build. Defaults to `false`
 - `disable`: Set to true to toggle off the analyzer. Defaults to `false`
 
 ```javascript
@@ -39,8 +38,7 @@ plugins: [
 	{
 		resolve: 'gatsby-plugin-webpack-bundle-analyzer',
 		options: {
-			analyzerPort: 3000,
-			production: true,
+			analyzerPort: 3000
 		},
 	},
 ]
