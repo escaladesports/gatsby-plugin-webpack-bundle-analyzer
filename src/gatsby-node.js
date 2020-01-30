@@ -2,7 +2,10 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
   if (options.disable) return;
-  actions.setWebpackConfig({
-    plugins: [new BundleAnalyzerPlugin(options)]
-  });
+  //Gatsby will use stage "develop" on `gatsby develop` and "build-javascript" on `gatsby build`
+  if (stage === 'develop' || stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      plugins: [new BundleAnalyzerPlugin(options)]
+    });
+  }
 };
